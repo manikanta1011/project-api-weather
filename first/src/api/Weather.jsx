@@ -9,7 +9,7 @@ function Weather() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
  
-  const fetchWeather = () => {
+  const handleWeather = () => {
     if (!city) {
       setError("Please enter a city name.");
       return;
@@ -52,7 +52,7 @@ function Weather() {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <button onClick={fetchWeather}>Get Weather</button>
+        <button onClick={handleWeather}>Get Weather</button>
       </div>
       {loading && <p className="loading">Loading...</p>}
       {error && <p className="error">{error}</p>}
