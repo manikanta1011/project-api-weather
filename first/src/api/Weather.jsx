@@ -11,7 +11,7 @@ function Weather() {
  
   const handleWeather = () => {
     if (!city) {
-      setError("Please enter a cityy.");
+      setError("Please enter a town or city.");
       return;
     }
  
